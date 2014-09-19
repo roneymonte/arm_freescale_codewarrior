@@ -34,31 +34,58 @@ int main(void)
 	GPIOB_PDDR |= (1<<19);	// Configura o bit 19 como output (1) Verde
 	GPIOD_PDDR |= (1<<1);	// Configura o bit 1 como output (1)  Azul
 	
+	GPIOB_PCOR = (1<<18);
+	GPIOB_PCOR = (1<<19);
+	GPIOD_PCOR = (1<<1);
+	delay (1000000);delay (1000000);delay (1000000);delay (1000000);
+	delay (1000000);delay (1000000);delay (1000000);delay (1000000);
+    GPIOB_PTOR = (1<<18);
+    GPIOB_PTOR = (1<<19);
+    GPIOD_PTOR = (1<<1);
+    delay (250000);
+    GPIOB_PTOR = (1<<18);
+    GPIOB_PTOR = (1<<19);
+    GPIOD_PTOR = (1<<1);
+    delay (250000);
+    GPIOB_PTOR = (1<<18);
+    GPIOB_PTOR = (1<<19);
+    GPIOD_PTOR = (1<<1);
+    delay (250000);
+    GPIOB_PTOR = (1<<18);
+    GPIOB_PTOR = (1<<19);
+    GPIOD_PTOR = (1<<1);
+    delay (250000);
+	
 	  for (;;) {
 		  
 	      GPIOB_PTOR = (1<<18);
 	      GPIOB_PTOR = (1<<19);
 	      GPIOD_PTOR = (1<<1);
+	      
 	      delay (1000000);
 		  
 	      GPIOB_PCOR = (1<<18);	// liga (PSOR) vermelho
 	      GPIOB_PSOR = (1<<19);	// desliga (PTOR) Verde
 	      GPIOD_PSOR = (1<<1);	// desliga (PTOR) Azul
+	      
 	      delay (1000000);
 
 	      GPIOB_PSOR = (1<<18);	// desliga (PSOR) vermelho
 	      GPIOB_PCOR = (1<<19);	// liga (PTOR) Verde
 	      GPIOD_PSOR = (1<<1);	// desliga (PTOR) Azul
+	      
 	      delay (1000000);
 
 	      GPIOB_PSOR = (1<<18);	// desliga (PSOR) vermelho
 	      GPIOB_PSOR = (1<<19);	// desliga (PTOR) Verde
 	      GPIOD_PCOR = (1<<1);	// liga (PTOR) Azul
+	      
 	      delay (1000000);
 
 	      GPIOB_PTOR = (1<<18);
 	      GPIOB_PTOR = (1<<19);
 	      GPIOD_PTOR = (1<<1);
+	      
 	      delay (1000000);
 
 
